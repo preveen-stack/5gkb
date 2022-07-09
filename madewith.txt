@@ -1,0 +1,7 @@
+made
+	with 
+		xedit
+			on mobaxterm xserver
+				on wsl ubuntu 20.04
+					on windows 10
+						Lenovo T430
