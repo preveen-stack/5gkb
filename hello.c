@@ -1,7 +1,9 @@
 #include <stdio.h>
 
+char message[] = "Hello World!";
+
 int main()
 {
-	printf("Hello World\n");
+	printf("%s\n", message);
 	return 0;
 }
