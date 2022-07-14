@@ -6,6 +6,7 @@ char prompt[] = "> ";
 
 int main()
 {
+	int message_count = 0;
 	printf("Will echo back what is typed, to end type %s", end_command);
 	printf("%s", prompt);
 
@@ -15,7 +16,7 @@ int main()
 		fgets(message, sizeof(message), stdin); // safe
 		if (strcmp(message, end_command) == 0) 
 			goto end;
-		printf("%s", message);
+		printf("%d: %s", ++message_count, message);
 		printf("%s", prompt);
 	}
 end:
