@@ -3,6 +3,18 @@
 
 char end_command[] = "bye\n";
 char prompt[] = "> ";
+void shuffle(char* message) {
+	char* i = message;
+	while(*i != '\0') {
+		printf("%s\n", i);
+		char t = *i;
+		if (*(i+1) != '\0' || *(i + 1) != '\n') {
+			*i = *(i + 1);
+			*(i + 1) = t;
+		}
+		i++;
+	}
+}
 
 int main()
 {
@@ -16,6 +28,7 @@ int main()
 		fgets(message, sizeof(message), stdin); // safe
 		if (strcmp(message, end_command) == 0) 
 			goto end;
+		//shuffle(message);
 		printf("%d: %s", ++message_count, message);
 		printf("%s", prompt);
 	}
