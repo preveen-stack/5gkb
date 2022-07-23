@@ -1,0 +1,5 @@
+fact(device_tree)
+- in petalinux once the build is complete go to <project_name>/images/linux directory
+- dtc system.dtb
+- The device tree will be printed on to the terminal (install dtc if required)
+- browse through the tree and make sure it is matching our understanding
