@@ -58,7 +58,14 @@ echo lasmintel: >> $1/Makefile
 echo -e '\t'clang -o bin/$1.s -S -masm=intel src/$1.c >> $1/Makefile
 echo -e '\t' less bin/$1.s >> $1/Makefile
 
+echo gprof: >> $1/Makefile
+echo -e '\t'gcc -Wall -pg -o bin/$1 src/$1.c >> $1/Makefile
+echo -e '\t'bin/$1 >> $1/Makefile
+echo -e '\t'gprof bin/$1 gmon.out '>> bin/prof_output' >> $1/Makefile
+echo -e '\t'less bin/prof_output >> $1/Makefile
+
 echo bin/ >> $1/.gitignore
+echo gmon.out >> $1/.gitignore
 cd $1
 
 echo created $1
