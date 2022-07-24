@@ -10,13 +10,14 @@ mkdir $1/src
 touch $1/src/$1.java
 echo '/*' >> $1/src/$1.java
 echo ' *' project $1 >> $1/src/$1.java
+echo ' *' `date` >> $1/src/$1.java
 echo ' */' >> $1/src/$1.java
 echo '' >> $1/src/$1.java
 echo public class $1 \{ >> $1/src/$1.java
 echo "" >> $1/src/$1.java
 echo -e '\t'public static void main\(String[] args\) \{ >> $1/src/$1.java
 echo -e '\t\tSystem.out.println("'$1': Hello, World");' >>$1/src/$1.java
-echo -e '\t' \} >> $1/src/$1.java
+echo -e '\t'\} >> $1/src/$1.java
 echo \} >> $1/src/$1.java
 
 touch $1/Makefile

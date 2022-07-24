@@ -11,11 +11,12 @@ mkdir $1/src
 touch $1/src/$1.c
 echo '/*' >> $1/src/$1.c
 echo ' *' project $1 >> $1/src/$1.c
+echo ' *' `date` >> $1/src/$1.c
 echo ' */' >> $1/src/$1.c
 echo '' >> $1/src/$1.c
 echo '#include <stdio.h>' >> $1/src/$1.c
 echo "" >> $1/src/$1.c
-echo int main\(\) \{ >> $1/src/$1.c
+echo int main\(int argc, char* argv[]\) \{ >> $1/src/$1.c
 echo -e '\tprintf("Hello, World\\n");' >>$1/src/$1.c
 echo -e '\t'return 0';' >>$1/src/$1.c 
 echo \} >> $1/src/$1.c

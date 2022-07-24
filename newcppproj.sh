@@ -11,11 +11,12 @@ mkdir $1/src
 touch $1/src/$1.cpp
 echo '/*' >> $1/src/$1.cpp
 echo ' *' project $1 >> $1/src/$1.cpp
+echo ' *' `date` >> $1/src/$1.cpp
 echo ' */' >> $1/src/$1.cpp
 echo '' >> $1/src/$1.cpp
 echo '#include <iostream>' >> $1/src/$1.cpp
 echo "" >> $1/src/$1.cpp
-echo int main\(\) \{ >> $1/src/$1.cpp
+echo int main\(int argc, char* argv[]\) \{ >> $1/src/$1.cpp
 echo -e '\tstd::cout << "Hello, World" << std::endl;' >>$1/src/$1.cpp
 echo -e '\t'return 0';' >>$1/src/$1.cpp
 echo \} >> $1/src/$1.cpp
