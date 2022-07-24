@@ -1,4 +1,9 @@
 #!/usr/bin/bash
+if [ $# -lt 1 ] ; then
+	echo usage $0 project_name
+	exit 1
+fi;
+
 mkdir $1
 mkdir $1/bin
 mkdir $1/src
